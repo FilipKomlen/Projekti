@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ime Prezime">
+    <meta name="description" content="Prototip web sjedišta za projekt 'Udruga ljubitelja knjige'">
+    <meta name="keywords" content="udruga, knjige, kultura, čitanje">
+    <title>Udruga ljubitelja knjige</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ff9933;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #3399cc;
+            padding: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 0.5em 0;
+        }
+
+        main {
+            background-color: #99cc66;
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #cc3333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            nav {
+                width: 20%;
+            }
+
+            main {
+                width: 80%;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Udruga ljubitelja knjige</h1>
+        <h2>Promicanje kulture čitanja</h2>
+    </header>
+
+    <div class="container">
+        <nav>
+            <h3>Navigacija</h3>
+            <a href="#">Početna</a>
+            <a href="#">Vježba 1</a>
+            <a href="#">Vježba 2</a>
+            <a href="#">Zadaća 1</a>
+            <a href="https://fsre.sum.ba/">FSRE</a>
+        </nav>
+
+        <main>
+            <h3>O projektu</h3>
+            <p style="text-align: justify;">
+                Naš projekt okuplja ljubitelje knjige i čitanja te organizira radionice, klubove čitatelja i razmjenu knjiga.
+            </p>
+
+            <h4>Galerija</h4>
+            <img src="knjizara.jpg" alt="Primjer slike knjiga">
+			<img src="knjizara2.jpg" alt="Primjer slike knjiga">
+
+            <h4>Statistika članova</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Godina</th>
+                        <th>Broj članova</th>
+                        <th>Održani događaji</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022</td>
+                        <td>120</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>150</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>180</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <footer>
+        <p>Autor: Filip Komlen | <a href="mailto:filip.komlen@gmail.com" style="color: white;">Kontaktiraj me</a></p>
+    </footer>
+</body>
+</html>
