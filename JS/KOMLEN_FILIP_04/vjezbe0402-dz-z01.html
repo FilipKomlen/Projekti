@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sredine brojeva</title>
+</head>
+<body>
+  <h2>Rezultati:</h2>
+  <div id="rezultat"></div>
+
+  <script type="text/javascript">
+    
+    let unos = prompt("Unesite prirodne brojeve odvojene zarezima (npr. 1, 4, 16):");
+
+    
+    let brojevi = unos.split(",").map(function (el) {
+      return parseFloat(el.trim());
+    });
+
+    
+    brojevi = brojevi.filter(function (broj) {
+      return Number.isFinite(broj) && broj > 0;
+    });
+
+    
+    if (brojevi.length === 0) {
+      document.getElementById("rezultat").innerHTML = "Niste unijeli nijedan valjan prirodan broj.";
+    } else {
+    
+      let suma = brojevi.reduce((a, b) => a + b, 0);
+      let aritmeticka = suma / brojevi.length;
+
+    
+      let umnozak = brojevi.reduce((a, b) => a * b, 1);
+      let geometrijska = Math.pow(umnozak, 1 / brojevi.length);
+
+    
+      document.getElementById("rezultat").innerHTML =
+        "<p>Aritmetička sredina: " + aritmeticka.toFixed(2) + "</p>" +
+        "<p>Geometrijska sredina: " + geometrijska.toFixed(2) + "</p>";
+    }
+  </script>
+</body>
+</html>

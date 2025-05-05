@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body> 
+ <script type="text/javascript">
+ 
+ function jeProst(broj) {
+     if (broj < 2) return false;
+     for (var i = 2; i <= Math.sqrt(broj); i++) {
+         if (broj % i === 0) return false;
+     }
+     return true;
+ }
+ 
+ for (var n = 1; n <= 1000; n++) {
+     if (jeProst(n)) {
+         console.log(n);                  
+         document.write(n + "<br/>");     
+     }
+ }
+ </script>
+</body>
+</html>

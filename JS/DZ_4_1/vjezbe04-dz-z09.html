@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body> 
+ <script type="text/javascript">
+ 
+ function ispisiSavrseneBrojeve(doBroja) {
+     document.write("Savršeni brojevi od 1 do " + doBroja + ":<br/>");
+
+     for (var n = 1; n <= doBroja; n++) {
+         var suma = 0;
+
+ 
+         for (var i = 1; i < n; i++) {
+             if (n % i === 0) {
+                 suma += i;
+             }
+         }
+
+         if (suma === n) {
+             document.write(n + "<br/>");
+             console.log(n);
+         }
+     }
+ }
+
+ 
+ ispisiSavrseneBrojeve(10000);
+ </script>
+</body>
+</html>

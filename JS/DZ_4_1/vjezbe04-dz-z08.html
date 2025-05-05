@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Varijable</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let polje = ['Ovo', 'je', 'My', 'prvi', 'komad', 'OF', 'JAVASCRIPT', 'koda', 'Koji', 'je', 'proradio'];
+
+        function filtriraj(poljeUnos) {
+            let novoPolje = [];
+
+            for (let i = 0; i < poljeUnos.length; i++) {
+                let vrijednost = poljeUnos[i];
+
+                let imaVelikoSlovo = vrijednost.match(/[A-ZČĆŽŠĐ]/);
+                let imaPetIliVise = vrijednost.length >= 5;
+
+                if (imaVelikoSlovo || imaPetIliVise) {
+                    novoPolje.push(vrijednost);
+                }
+            }
+
+            return novoPolje;
+        }
+
+        let rezultat = filtriraj(polje);
+        document.write(rezultat.join(", "));
+    </script>
+</body>
+</html>

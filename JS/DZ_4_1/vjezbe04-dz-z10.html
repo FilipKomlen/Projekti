@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vjezbe</title>
+</head>
+<body>
+    <script>
+        function randomBroj(min, max) {
+            if (min > max) 
+			{
+                console.error("The first argument must be less than or equal to the second argument.");
+                return;
+            }
+
+            for (let i = 0; i < 5; i++) 
+			{
+                let randomNum = Math.random() * (max - min) + min;
+                console.log(randomNum);
+            }
+        }
+
+        randomBroj(10, 20);
+    </script>
+</body>
+</html>

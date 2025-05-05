@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varijable</title>
+</head>
+<body>
+    <script>
+    const calculateSquare = function(input) {
+        if (typeof input === "number") {
+            return input * input;
+        } else {
+            return "Error.";
+        }
+    };
+
+    console.log(calculateSquare(3)); // Outputs: 25
+    console.log(calculateSquare("test")); // Outputs: Error: Input is not a number.
+    </script>
+</body>
+</html>

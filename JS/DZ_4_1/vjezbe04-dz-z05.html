@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varijable</title>
+</head>
+<body>
+    <script>
+
+        const osoba1 = { ime: "Marko", prezime: "Maric", godine: 40, bojaOciju: "crna" };
+        const osoba2 = { ime: "Ana", prezime: "Anic", godine: 30, bojaOciju: "plava" };
+        const osoba3 = { ime: "Ivan", prezime: "Ivic", godine: 25, bojaOciju: "zelena" };
+
+        const osobe = [osoba1, osoba2, osoba3];
+
+        for (let i = 0; i < osobe.length; i++) 
+		{
+            document.write(`<h3>Osoba ${i + 1}</h3>`);
+            for (const kljuc in osobe[i]) {
+            document.write(`${kljuc}: ${osobe[i][kljuc]}<br>`);
+            }
+        }
+    </script>
+</body>
+</html>

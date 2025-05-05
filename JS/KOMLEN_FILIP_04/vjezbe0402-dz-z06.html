@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zbrajanje brojeva</title>
+    <style>
+        input {
+            width: 50px;
+            margin: 10px 0;
+        }
+
+        .divider {
+            margin: 20px 0;
+            width: 300px;
+            border-top: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Zbrajanje dva broja</h2>
+
+<label for="x">X = </label>
+<input type="number" id="x" required><br>
+
+<label for="y">Y = </label>
+<input type="number" id="y" required><br>
+
+<button type="button" onclick="zbroji()">Zbroji</button>
+
+<div class="divider"></div>
+
+<label for="rezultat">REZULTAT = </label>
+<input type="text" id="rezultat" disabled><br>
+
+<script>
+    function zbroji() {
+        let x = parseFloat(document.getElementById('x').value);
+        let y = parseFloat(document.getElementById('y').value);
+        let rezultat = x + y;
+        document.getElementById('rezultat').value = rezultat;
+    }
+</script>
+
+</body>
+</html>

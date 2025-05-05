@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Promjena pozadine</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+    #boja {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="promijeniPozadinu()">Promijeni pozadinu</button>
+  <div id="boja">Trenutna boja: #FFFFFF</div>
+
+  <script>
+    function generirajHexBoju() {
+      let randomBroj = Math.floor(Math.random() * 16777216);
+      let hex = "#" + randomBroj.toString(16).padStart(6, '0');
+      return hex.toUpperCase();
+    }
+
+    function promijeniPozadinu() {
+      let novaBoja = generirajHexBoju();
+      document.body.style.backgroundColor = novaBoja;
+      document.getElementById("boja").innerText = "Trenutna boja: " + novaBoja;
+    }
+  </script>
+
+</body>
+</html>

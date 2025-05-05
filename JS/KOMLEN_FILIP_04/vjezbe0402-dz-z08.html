@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="calculator"></form>
+        <input type="text" id="operand1" placeholder="operand1">
+        <br>
+        <input type="text" id="operand2" placeholder="operand2" value="3">
+        <br>
+        <button type="button" onclick="calculate('+')">+</button>
+        <button type="button" onclick="calculate('-')">-</button>
+        <button type="button" onclick="calculate('*')">*</button>
+        <button type="button" onclick="calculate('/')">/</button>
+        <br>
+        <button type="button" onclick="calculate('sin')">sin</button>
+        <button type="button" onclick="calculate('cos')">cos</button>
+        <button type="button" onclick="calculate('tan')">tan</button>
+        <br>
+        <button type="button" onclick="calculate('ln')">ln</button>
+        <button type="button" onclick="calculate('log')">log</button>
+        <br>
+        <button type="button" onclick="calculate('^2')">^2</button>
+        <button type="button" onclick="calculate('^3')">^3</button>
+        <button type="button" onclick="calculate('^n')">^n</button>
+    </form>
+
+    <script>
+        function calculate(operation) {
+            const operand1 = parseFloat(document.getElementById('operand1').value) || 0;
+            const operand2 = parseFloat(document.getElementById('operand2').value) || 0;
+            let result;
+
+            switch (operation) {
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+                case '/':
+                    result = operand2 !== 0 ? operand1 / operand2 : 'Error: Division by zero';
+                    break;
+                case 'sin':
+                    result = Math.sin(operand1);
+                    break;
+                case 'cos':
+                    result = Math.cos(operand1);
+                    break;
+                case 'tan':
+                    result = Math.tan(operand1);
+                    break;
+                case 'ln':
+                    result = operand1 > 0 ? Math.log(operand1) : 'Error: Invalid input for ln';
+                    break;
+                case 'log':
+                    result = operand1 > 0 ? Math.log10(operand1) : 'Error: Invalid input for log';
+                    break;
+                case '^2':
+                    result = Math.pow(operand1, 2);
+                    break;
+                case '^3':
+                    result = Math.pow(operand1, 3);
+                    break;
+                case '^n':
+                    result = Math.pow(operand1, operand2);
+                    break;
+                default:
+                    result = 'Error: Unknown operation';
+            }
+
+            alert(result);
+        }
+    </script>
+</body>
+</html>
